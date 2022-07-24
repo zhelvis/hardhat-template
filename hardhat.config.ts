@@ -1,11 +1,10 @@
-import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
 
 import './tasks/deploy';
 
 import { DEPLOYER_PRIVATE_KEY } from "./environment";
 
-const config: HardhatUserConfig = {
+const config = {
   solidity: "0.8.9",
   networks: {
     local: {
@@ -13,7 +12,10 @@ const config: HardhatUserConfig = {
       accounts: [DEPLOYER_PRIVATE_KEY],
     },
     // TODO: other networks
-  }
+  },
+  gasReporter: {
+    enabled: true
+  },
 };
 
 export default config;
