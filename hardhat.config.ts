@@ -1,6 +1,6 @@
 import "@nomicfoundation/hardhat-toolbox";
 
-import './tasks/deploy';
+import "./tasks/deploy";
 
 import { DEPLOYER_PRIVATE_KEY, BSC_BE_API_KEY } from "./environment";
 
@@ -8,7 +8,7 @@ const config = {
   solidity: "0.8.9",
   networks: {
     local: {
-      url: 'http://localhost:8545',
+      url: "http://localhost:8545",
       accounts: [DEPLOYER_PRIVATE_KEY],
     },
     bsc: {
@@ -18,12 +18,12 @@ const config = {
     },
   },
   gasReporter: {
-    enabled: true
+    enabled: true,
   },
   etherscan: {
     apiKey: {
       bsc: BSC_BE_API_KEY,
-    }
+    },
   },
 };
 

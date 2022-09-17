@@ -20,7 +20,9 @@ describe("Token", function () {
     it("Should mint tokens to deployer address", async function () {
       const { token, owner } = await loadFixture(deployTokenFixture);
 
-      expect(await token.balanceOf(owner.address)).to.equal(await token.totalSupply());
+      expect(await token.balanceOf(owner.address)).to.equal(
+        await token.totalSupply()
+      );
     });
-  })
+  });
 });
