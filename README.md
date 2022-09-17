@@ -1,15 +1,21 @@
 # Sample Hardhat Project
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+This project demonstrates a basic Hardhat use case. It comes with a sample ERC20 token contract, a test for that contract, and a script that deploys that contract.
 
-Try running some of the following tasks:
+Usage:
 
 ```shell
-npx hardhat help
+# compile contract
+npx hardhat compile
+
+# run tests
 npx hardhat test
-GAS_REPORT=true npx hardhat test
+
+# run local node
+
 npx hardhat node
-npx hardhat run scripts/deploy.ts
-// local deploy
-npx hardhat run --network localhost scripts/deploy.ts
+
+# deploy token contract
+
+npx hardhat deploy_token --network <network>
 ```
